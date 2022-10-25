@@ -2,14 +2,15 @@ import React from 'react';
 import MapComponent from './components/Map';
 import './App.css';
 import NavBar from './components/NavBar';
-
+import ContextProviders from './context/ContextProviders';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      
-      <MapComponent />
+      <ContextProviders>
+
+      </ContextProviders>
       
     </div>
   );
