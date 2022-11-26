@@ -1,17 +1,20 @@
 import React from 'react';
-import MapComponent from './components/Map';
+import { Routes ,Route } from 'react-router-dom';
+import Home from './components/Home';
+import NavBar from './components/NavBar'
 import './App.css';
-import NavBar from './components/NavBar';
-import ContextProviders from './context/ContextProviders';
+
+
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ContextProviders>
-
-      </ContextProviders>
-      
+      <div className="h-full">
+      <Routes>
+        <Route path = '/' element={  <Home/>}/>
+      </Routes>
+      </div>
     </div>
   );
 }
